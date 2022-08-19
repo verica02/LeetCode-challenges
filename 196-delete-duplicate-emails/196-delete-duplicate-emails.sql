@@ -5,4 +5,4 @@ where id not in(
 select id 
 from (select min(id) as Id, Email
      from person
-     group by Email) as i)
+     group by Email)i)
