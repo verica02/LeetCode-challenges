@@ -9,7 +9,7 @@ var findOriginalArray = function(changed) {
         return []; 
     }
     
-    let double = true;
+    let doubled = true;
     
     changed.sort((a,b) => a-b) 
     
@@ -21,7 +21,7 @@ var findOriginalArray = function(changed) {
         
         if(pos === -1){
             
-            double = false; 
+            doubled = false; 
             
             break;
             
@@ -33,5 +33,5 @@ var findOriginalArray = function(changed) {
         } 
     }
     
-    return (double? changed: []);
+    return (doubled? changed: []);
 };
