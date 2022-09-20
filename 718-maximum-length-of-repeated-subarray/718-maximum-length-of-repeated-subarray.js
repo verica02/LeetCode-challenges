@@ -5,7 +5,7 @@
  */
 var findLength = function(nums1, nums2) {
     
-    var temp_arr = Array(nums2.length + 1).fill(0);
+    var temp = Array(nums2.length + 1).fill(0);
     
     var result = 0;
     
@@ -16,15 +16,15 @@ var findLength = function(nums1, nums2) {
             
             if(nums1[i - 1] === nums2[j - 1]) {
                 
-                temp_arr[j] = temp_arr[j - 1] + 1;
+                temp[j] = temp[j - 1] + 1;
                 
             } else {
                 
                
-                temp_arr[j] = 0; 
+                temp[j] = 0; 
             }
             
-            if(result < temp_arr[j]) result = temp_arr[j]; 
+            if(result < temp[j]) result = temp[j]; 
 
         }
     }
